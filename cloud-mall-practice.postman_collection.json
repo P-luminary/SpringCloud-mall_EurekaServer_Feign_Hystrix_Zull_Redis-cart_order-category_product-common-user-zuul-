@@ -1,0 +1,1262 @@
+{
+	"info": {
+		"_postman_id": "7239eda9-4f88-463f-b03a-fe8c0f7becc8",
+		"name": "cloud-mall-practice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33341754"
+	},
+	"item": [
+		{
+			"name": "用户模块",
+			"item": [
+				{
+					"name": "注册新用户",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8083/user/register?userName=mumu123456&password=mumu123456",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"register"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "mumu123456"
+								},
+								{
+									"key": "password",
+									"value": "mumu123456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "用户登录",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8083/user/login?userName=mumu123456&password=mumu123456",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"login"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "mumu123456"
+								},
+								{
+									"key": "password",
+									"value": "mumu123456"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "更新个性签名",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8083/user/user/update?signature=乘风破浪的坤坤2",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"user",
+								"update"
+							],
+							"query": [
+								{
+									"key": "signature",
+									"value": "乘风破浪的坤坤2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "登出 Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8083/user/logout",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "管理员登录",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8083/user/adminLogin?userName=mumu123456&password=mumu123456",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"adminLogin"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "mumu123456"
+								},
+								{
+									"key": "password",
+									"value": "mumu123456"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "商品目录和商品",
+			"item": [
+				{
+					"name": "商品目录",
+					"item": [
+						{
+							"name": "新增目录 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"name\":\"鸭货伴手\",\"type\":2,\"parentId\":4,\"orderNum\":5}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/category-product/admin/category/add",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"category-product",
+										"admin",
+										"category",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "更新目录 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"id\":\"32\",\"name\":\"鸭货2\",\"type\":1}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/category-product/admin/category/update",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"category-product",
+										"admin",
+										"category",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除目录 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"id\":\"29\",\"name\":\"鸭货\",\"type\":3}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/category-product/admin/product/delete?id=45",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"category-product",
+										"admin",
+										"product",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "45"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "目录列表(管理员看) Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"id\":\"29\",\"name\":\"鸭货\",\"type\":3}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/category-product/admin/category/list?pageNum=1&pageSize=10",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"category-product",
+										"admin",
+										"category",
+										"list"
+									],
+									"query": [
+										{
+											"key": "pageNum",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "目录列表(給用户看) Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"id\":\"29\",\"name\":\"鸭货\",\"type\":3}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/category-product/category/list",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"category-product",
+										"category",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "商品",
+					"item": [
+						{
+							"name": "上传图片 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Pluminary/Desktop/jie.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/category-product/admin/upload/file",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"category-product",
+										"admin",
+										"upload",
+										"file"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新增商品 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"name\":\"新鲜猕猴桃3\",\"categoryId\":5,\"price\":1000,\"stock\":10,\"status\":1,\"detail\":\"新西兰黄心，黄金奇异果\",\"image\":\"http://127.0.0.1:8083/images/6037baf8-5251-4560-be5a-32b8ee3823cf.png\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/category-product/admin/product/add",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"category-product",
+										"admin",
+										"product",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "更新商品 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"id\":44,\"name\":\"新鲜猕猴桃2\",\"categoryId\":5,\"price\":1000,\"stock\":200,\"status\":1,\"detail\":\"新西兰黄心，黄金奇异果\",\"image\":\"http://127.0.0.1:8083/images/6037baf8-5251-4560-be5a-32b8ee3823cf.png\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/category-product/admin/product/update",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"category-product",
+										"admin",
+										"product",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除商品 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/category-product/admin/product/delete?id=44",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"category-product",
+										"admin",
+										"product",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "44"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "批量生产 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/category-product/admin/product/batchUpdateSellStatus?ids=2,3&sellStatus=1",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"category-product",
+										"admin",
+										"product",
+										"batchUpdateSellStatus"
+									],
+									"query": [
+										{
+											"key": "ids",
+											"value": "2,3"
+										},
+										{
+											"key": "sellStatus",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "后台商品列表 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/admin/product/list?pageNum=1&pageSize=10",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"",
+										"admin",
+										"product",
+										"list"
+									],
+									"query": [
+										{
+											"key": "pageNum",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "前台商品列表 Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/category-product/product/list?pageNum=1&pageSize=10&categoryId=3",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"category-product",
+										"product",
+										"list"
+									],
+									"query": [
+										{
+											"key": "pageNum",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										},
+										{
+											"key": "orderBy",
+											"value": "price asc",
+											"disabled": true
+										},
+										{
+											"key": "keyword",
+											"value": "橙",
+											"disabled": true
+										},
+										{
+											"key": "categoryId",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "前台商品详情 Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/category-product/product/detail?id=2",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"category-product",
+										"product",
+										"detail"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "购物车和订单",
+			"item": [
+				{
+					"name": "购物车",
+					"item": [
+						{
+							"name": "添加商品到购物车 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"id\":\"29\",\"name\":\"鸭货\",\"type\":3}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/cart-order/cart/add?productId=24&count=1",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"cart-order",
+										"cart",
+										"add"
+									],
+									"query": [
+										{
+											"key": "productId",
+											"value": "24"
+										},
+										{
+											"key": "count",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "更新购物车 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"id\":\"29\",\"name\":\"鸭货\",\"type\":3}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/cart/update?productId=22&count=1",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"cart",
+										"update"
+									],
+									"query": [
+										{
+											"key": "productId",
+											"value": "22"
+										},
+										{
+											"key": "count",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除购物车 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"id\":\"29\",\"name\":\"鸭货\",\"type\":3}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/cart/delete?productId=22",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"cart",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "productId",
+											"value": "22"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "选择/不选择购物车 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"id\":\"29\",\"name\":\"鸭货\",\"type\":3}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/cart/select?productId=22&selected=1",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"cart",
+										"select"
+									],
+									"query": [
+										{
+											"key": "productId",
+											"value": "22"
+										},
+										{
+											"key": "selected",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "全选择/全不选择购物车 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"id\":\"29\",\"name\":\"鸭货\",\"type\":3}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/cart/selectAll?selected=0",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"cart",
+										"selectAll"
+									],
+									"query": [
+										{
+											"key": "selected",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "购物车列表 Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"id\":\"29\",\"name\":\"鸭货\",\"type\":3}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/cart/list",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"cart",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "订单",
+					"item": [
+						{
+							"name": "生成订单 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"receiverName\":\"潘春尧\",\"receiverMobile\":\"1888888888\",\"receiverAddress\":\"北极科考站\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/cart-order/order/create",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"cart-order",
+										"order",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "生成支付二维码 Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/order/qrcode?orderNo=100330559731",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"order",
+										"qrcode"
+									],
+									"query": [
+										{
+											"key": "orderNo",
+											"value": "100330559731"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "订单列表 Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"receiverName\":\"潘春尧\",\"receiverMobile\":\"1888888888\",\"receiverAddress\":\"南昌工学院\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "47.98.225.105:8083/order/list?pageNum=1&pageSize=10",
+									"host": [
+										"47",
+										"98",
+										"225",
+										"105"
+									],
+									"port": "8083",
+									"path": [
+										"order",
+										"list"
+									],
+									"query": [
+										{
+											"key": "pageNum",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "支付订单 Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/pay?orderNo=118373859283",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"pay"
+									],
+									"query": [
+										{
+											"key": "orderNo",
+											"value": "118373859283"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "订单列表(給管理员) Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"receiverName\":\"潘春尧\",\"receiverMobile\":\"1888888888\",\"receiverAddress\":\"南昌工学院\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/admin/order/list?pageNum=1&pageSize=10",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"admin",
+										"order",
+										"list"
+									],
+									"query": [
+										{
+											"key": "pageNum",
+											"value": "1"
+										},
+										{
+											"key": "pageSize",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "订单详情 Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"receiverName\":\"潘春尧\",\"receiverMobile\":\"1888888888\",\"receiverAddress\":\"南昌工学院\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/order/detail?orderNo=118363759472",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"order",
+										"detail"
+									],
+									"query": [
+										{
+											"key": "orderNo",
+											"value": "118363759472"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "取消订单 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"receiverName\":\"潘春尧\",\"receiverMobile\":\"1888888888\",\"receiverAddress\":\"南昌工学院\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/order/cancel?orderNo=122444659411",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"order",
+										"cancel"
+									],
+									"query": [
+										{
+											"key": "orderNo",
+											"value": "122444659411"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "订单发货 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"receiverName\":\"潘春尧\",\"receiverMobile\":\"1888888888\",\"receiverAddress\":\"南昌工学院\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/admin/order/delivered?orderNo=122453059468",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"admin",
+										"order",
+										"delivered"
+									],
+									"query": [
+										{
+											"key": "orderNo",
+											"value": "122453059468"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "订单完结 Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"receiverName\":\"潘春尧\",\"receiverMobile\":\"1888888888\",\"receiverAddress\":\"南昌工学院\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8083/order/finish?orderNo=122453059468",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8083",
+									"path": [
+										"order",
+										"finish"
+									],
+									"query": [
+										{
+											"key": "orderNo",
+											"value": "122453059468"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
